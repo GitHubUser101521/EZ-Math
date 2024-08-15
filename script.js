@@ -12,9 +12,14 @@ function startGame() {
     console.log('It works');
 
     const firstNumFirstDigit = number();
+    console.log(firstNumFirstDigit);
     const firstNumSecondDigit = number();
+    console.log(firstNumSecondDigit);
     const secondNumFirstDigit = number();
+    console.log(secondNumFirstDigit);
     const secondNumSecondDigit = number();
+    console.log(secondNumSecondDigit);
+
     let symbol = symbolGenerator();
     calculation = firstNumFirstDigit + firstNumSecondDigit + symbol + secondNumFirstDigit + secondNumSecondDigit;
 
@@ -29,10 +34,22 @@ function startGame() {
         console.log(number);
         let result;
 
-        if (number >= 0 && number <= 0.5) {
+        if (number >= 0 && number <= 0.4) {
             result = " + ";
-        } else if (number > 0.5 && number < 1) {
+        } else if (number > 0.4 && number <= 0.7) {
             result = " - ";
+        } else if (number > 0.7 && number <= 1) {
+            // let firstDigit = (firstNumFirstDigit + firstNumSecondDigit).toString();
+            // console.log(firstDigit);
+            // let secondDigit = (secondNumFirstDigit + secondNumSecondDigit).toString();
+            // console.log(secondDigit);
+            // if ((firstDigit / secondDigit) > 1) {
+            //     result = " / ";
+            // } else {
+            //     result = " * ";
+            // }
+
+            result = " * ";
         }
 
         return result;
